@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> Weather Dashboard</h1>
+            <p>Get real-time weather information for any city</p>
+        </header>
+        
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            <div class="examples">
+                <p>Try: London, New York, Tokyo, Paris, Sydney</p>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+        
+        <div class="error-message" id="error-message"></div>
+        
+        <div class="weather-info" id="weather-info">
+            <div class="weather-card">
+                <div class="location">
+                    <span class="city-name" id="city-name"></span>
+                    <span class="country" id="country"></span>
+                </div>
+                <div class="temperature" id="temperature"></div>
+                <div class="feels-like" id="feels-like"></div>
+                <div class="condition">
+                    <img id="weather-icon" src="" alt="Weather condition">
+                    <span id="weather-condition"></span>
+                </div>
+                <div class="details">
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <span class="value" id="wind-speed"></span>
+                            <span class="label">Wind Speed</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-compass"></i>
+                        <div>
+                            <span class="value" id="wind-direction"></span>
+                            <span class="label">Wind Direction</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <span class="value" id="humidity"></span>
+                            <span class="label">Humidity</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="last-updated" id="last-updated"></div>
+            </div>
+        </div>
+        
+        <div class="recent-searches" id="recent-searches">
+            <h3>Recent Searches</h3>
+            <div class="recent-list" id="recent-list"></div>
+        </div>
+        
+        <footer>
+            <p>Powered by WeatherAPI.com</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

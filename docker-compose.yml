@@ -1,0 +1,45 @@
+
+services: 
+  frontend:
+    container_name: UI
+    build:
+      context: ./front-end
+      dockerfile: dockerfile
+    expose:
+      - '80'
+    volumes:
+      - /home/mohamed/test-1/front-end/website:/usr/local/apache2/htdocs/
+    networks:
+      - project
+  
+    
+  python-api:
+      container_name: backend
+      build:
+        context: ./python-app
+        dockerfile: dockerfile
+      expose:
+        - '5050'
+      volumes:
+        - /home/mohamed/test-1/python-app:/dockerWD
+      networks:
+        - project
+  loadbalancer:
+    container_name: nginx
+    build:
+      context: ./nginx
+      dockerfile: dockerfile
+    ports:
+      - 8000:80
+    depends_on:
+      - frontend
+      - python-api
+    networks:
+      - project
+
+
+networks:
+  project:
+    driver: bridge 
+
+    
