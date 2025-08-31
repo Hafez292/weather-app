@@ -84,7 +84,7 @@ pipeline {
                     sh '''
                         echo $PASS | docker login -u $USER --password-stdin
                         docker tag python-app mohamedtony/weather-app:backend
-                        docker tag UI mohamedtony/weather-app:frontend
+                        docker tag ui mohamedtony/weather-app:frontend
                         docker tag nginx mohamedtony/weather-app:loadbalancer
                         
                         docker push mohamedtony/weather-app:backend
