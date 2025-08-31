@@ -69,7 +69,7 @@ pipeline {
                 script {
                     docker.build("python-app", "${WORKSPACE}/python-app/")
                     docker.build("nginx", "${WORKSPACE}/nginx/")
-                    docker.build("UI","${WORKSPACE}/frontend")
+                    docker.build("ui","${WORKSPACE}/frontend")
                 }
             }
         }
