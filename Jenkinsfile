@@ -1,8 +1,9 @@
 pipeline {
-    agent {
-        /*label 'Ec2-Agent'*/
+    agent any
+    /*agent {
+        label 'Ec2-Agent'
         label any
-    }
+    }*/
     triggers{
         pollSCM('H/30 * * * *')
     }
