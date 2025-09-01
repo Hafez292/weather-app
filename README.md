@@ -107,43 +107,43 @@ Open your web browser and navigate to:
 🔁 CI/CD Pipeline
 This project includes a Jenkins pipeline for continuous integration and deployment:
 
-Pipeline Stages:
-Checkout: Pull the latest code from the repository
-
-Test Backend API: Run tests inside the backend container
-
-Build Docker Images: Build Docker images for all services
-
-Push to DockerHub: Push images to DockerHub registry
-
-Deploy: Deploy the updated containers to the target environment
-
-Setup Instructions:
-Jenkins Configuration:
-
-Install required plugins: Docker Pipeline, Git, Credentials Binding
-
-Set up credentials in Jenkins:
-
-dockerhub-credentials (Username and password for DockerHub)
-
-weather-api-key (Secret text for WeatherAPI key)
-
-EC2 Agent Setup:
-
-Ensure Docker and Docker Compose are installed on the agent
-
-Configure the agent with the label 'ec2-agent'
-
-Create Pipeline:
-
-Create a new Pipeline job in Jenkins
-
-Set definition to "Pipeline script from SCM"
-
-Configure your repository URL
-
-Set script path to "Jenkinsfile"
+  Pipeline Stages:
+  Checkout: Pull the latest code from the repository
+  
+  Test Backend API: Run tests inside the backend container
+  
+  Build Docker Images: Build Docker images for all services
+  
+  Push to DockerHub: Push images to DockerHub registry
+  
+  Deploy: Deploy the updated containers to the target environment
+  
+  Setup Instructions:
+  Jenkins Configuration:
+  
+  Install required plugins: Docker Pipeline, Git, Credentials Binding
+  
+  Set up credentials in Jenkins:
+  
+  dockerhub-credentials (Username and password for DockerHub)
+  
+  weather-api-key (Secret text for WeatherAPI key)
+  
+  EC2 Agent Setup:
+  
+  Ensure Docker and Docker Compose are installed on the agent
+  
+  Configure the agent with the label 'ec2-agent'
+  
+  Create Pipeline:
+  
+  Create a new Pipeline job in Jenkins
+  
+  Set definition to "Pipeline script from SCM"
+  
+  Configure your repository URL
+  
+  Set script path to "Jenkinsfile"
 
 ## 🎯 Usage
 
@@ -275,7 +275,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 📞 Support
 
-If you have any questions or need support, please open an issue on GitHub or contact With Me.
+If you have any questions or need support,  contact With Me.
 
 ---
 
