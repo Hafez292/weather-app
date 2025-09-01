@@ -74,7 +74,7 @@ For CI/CD pipeline:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/weather-app.git
+git clone https://github.com/Hafez292/Microservice-weather-app
 cd weather-app
 ```
 
