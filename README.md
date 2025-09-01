@@ -1,8 +1,3 @@
-# Weather Application - Complete README
-
-Here's a comprehensive README file for your weather application project:
-
-```markdown
 # 🌤️ Weather Dashboard
 
 A containerized weather application that provides real-time weather information for any city worldwide. Built with a modern microservices architecture using Docker containers.
@@ -12,6 +7,7 @@ A containerized weather application that provides real-time weather information 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-yellow)
 ![Flask](https://img.shields.io/badge/Flask-API%20Backend-lightgrey)
 ![Nginx](https://img.shields.io/badge/Nginx-Reverse%20Proxy-green)
+![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-orange)
 
 ## 📋 Table of Contents
 
@@ -20,6 +16,7 @@ A containerized weather application that provides real-time weather information 
 - [Technologies Used](#-technologies-used)
 - [Prerequisites](#-prerequisites)
 - [Installation & Setup](#-installation--setup)
+- [CI/CD Pipeline](#-cicd-pipeline)
 - [Usage](#-usage)
 - [API Reference](#-api-reference)
 - [Project Structure](#-project-structure)
@@ -40,7 +37,6 @@ A containerized weather application that provides real-time weather information 
 ## 🏗️ Architecture
 
 The application follows a microservices architecture with three main components:
-
 ```
 Client Browser → Nginx (Reverse Proxy) → Frontend Container → Backend Container → WeatherAPI
 ```
@@ -159,7 +155,7 @@ Set script path to "Jenkinsfile"
 ### Example Searches:
 - London
 - New York
-- 
+ 
 ## 🔌 API Reference
 
 ### Get Weather by City
