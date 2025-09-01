@@ -1,9 +1,7 @@
 pipeline {
-    agent any
-    /*agent {
+    agent {
         label 'Ec2-Agent'
-        label any
-    }*/
+    }
     triggers{
         pollSCM('H/30 * * * *')
     }
@@ -27,7 +25,7 @@ pipeline {
                 ])
             }
         }
-        /*stage('ConnectionTo E2-Agent'){
+        stage('Connection To E2-Agent'){
             steps{
                 sh '''
                 git --version
@@ -62,8 +60,7 @@ pipeline {
                 '''
             }
         }
-        */
-
+        
         stage('Building-Image') {
             steps {
                 script {
